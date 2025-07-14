@@ -1,0 +1,35 @@
+{
+  "analysis_results": [
+    [
+      "Issue Type",
+      "Bug"
+    ],
+    [
+      "Priority",
+      "High",
+      "Performance"
+    ],
+    [
+      "Priority",
+      "High",
+      "User Experience"
+    ],
+    [
+      "Priority",
+      "High",
+      "Business Impact"
+    ],
+    [
+      "Component",
+      "Mobile"
+    ],
+    [
+      "Component",
+      "API"
+    ],
+    [
+      "Issue Type",
+      "Documentation"
+    ]
+  ]
+}
