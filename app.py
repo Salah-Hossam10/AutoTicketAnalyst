@@ -9,7 +9,6 @@ class SupportTicketClassifier:
     """
     
     def __init__(self):
-        # Configure Azure OpenAI with your credentials
         self.client = openai.AzureOpenAI(
             api_key="api_key",
             api_version="api_version", 
@@ -71,7 +70,7 @@ class SupportTicketClassifier:
         self, 
         ticket_content: str, 
         categories: List[Dict[str, Any]],
-        model: str = "gpt-4o"  # Your Azure deployment name
+        model: str = "gpt-4o"  
     ) -> Dict[str, List[List[str]]]:
         """
         Classify a support ticket using the provided categories.
@@ -136,7 +135,7 @@ class SupportTicketClassifier:
         ticket_file: str, 
         categories_file: str,
         output_file: Optional[str] = None,
-        model: str = "gpt-4o"  # Your Azure deployment name
+        model: str = "gpt-4o"  
     ) -> Dict[str, List[List[str]]]:
         """
         Complete pipeline to load files, classify ticket, and return/print results.
@@ -167,7 +166,7 @@ def main():
     parser.add_argument("ticket_file", help="Path to the ticket text file")
     parser.add_argument("categories_file", help="Path to the JSON categories file")
     parser.add_argument("--output", help="Optional output file path")
-    parser.add_argument("--model", default="gpt-4o",  # Changed to gpt-4o
+    parser.add_argument("--model", default="gpt-4o", 
                        help="Azure OpenAI deployment name (default: gpt-4o)")
     
     args = parser.parse_args()
